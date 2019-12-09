@@ -7,13 +7,13 @@
    
    <!-- Theme Made By www.w3schools.com - No Copyright -->
     <title>AZED</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <style>
         body {
             font: 400 15px/1.8 Lato, sans-serif;
@@ -46,18 +46,12 @@
         .carousel-inner img {
             -webkit-filter: grayscale(70%);
             filter: grayscale(70%); /* make all photos black and white */
-            width: 100%; /* Set width to 100% */
             margin: auto;
+            width:100%;
         }
 
-        .carousel-caption h3 {
-            color: #fff !important;
-        }
-
-        @media (max-width: 600px) {
-            .carousel-caption {
-                display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-            }
+        .carousel .item {
+        height: 750px;
         }
 
         .bg-1 {
@@ -111,14 +105,14 @@
         .modal-dialog {
         width: 100% !important;
         height: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 10px !important;
+        padding: 5px !important;
         max-width:none !important;
-
-    }
+        }
 
     .modal-content {
         height: auto !important;
+        width: auto;
         min-height: 100% !important;
         border-radius: 0 !important;
         background-color: #ececec !important 
@@ -134,13 +128,6 @@
 
         .nav-tabs li a {
             color: #777;
-        }
-
-        #googleMap {
-            width: 100%;
-            height: 400px;
-            -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
         }
 
         .navbar {
@@ -205,8 +192,47 @@
         textarea {
             resize: none;
         }
+
+        table.table_class tbody  tr th  
+                {
+                 text-align:center !important;
+                 
+                }
+
+        #form1 {}
+        .customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        font-size: 12px;
+        
+        }
+
+.customers td, .customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customers input[type="text"]{
+    width: 100%;
+   
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+            .customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
     </style>
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <form id="form1" runat="server">
@@ -224,8 +250,8 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#myPage">HOME</a></li>
-                    <li><a href="#band">BAND</a></li>
-                    <li><a href="#tour">TOUR</a></li>
+                    <li><a href="#band">QUERY</a></li>
+                    <li><a href="#tour">RECORD</a></li>
                     <li><a href="#contact">REPORT</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -255,24 +281,15 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="~/Images/azed_overview.jpg" alt="AZED" runat="server" width="800" height="300">
-                <div class="carousel-caption">
-                 
-                </div>
+                <img src="~/Images/azed_tem.jpg" alt="AZED" runat="server" width="800" height="300"/>
             </div>
 
             <div class="item">
-                <img src="~/Images/spsf_info.png" alt="AZED" runat="server" width="1000" height="500">
-                <div class="carousel-caption">
-                
-                </div>
+                <img src="~/Images/azed_5.png" alt="AZED" runat="server" width="1000" height="500"/>
             </div>
 
             <div class="item">
-                <img src="~/Images/azed_template.png" alt="AZED" runat="server" width="1000" height="300">
-                <div class="carousel-caption">
-                    
-                </div>
+                <img src="~/Images/azed_tem.jpg" alt="AZED" runat="server" width="1000" height="300"/>
             </div>
         </div>
 
@@ -285,16 +302,16 @@
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div>                       
 
     <!-- Container (The Band Section) -->
     <div id="band" class="container text-center">
         <br>
         <div class="row">
-            <div class="col-sm-4">
-                <p class="text-center"><strong>Name</strong></p><br>
+            <div class="col-sm-3">
+                <p class="text-center"><strong>Student</strong></p><br>
                 <a href="#demo" data-toggle="collapse">
-                    <img src="~/Images/public_sector.png" runat = "server" class="img-circle person" alt="Random Name" width="255" height="255"/>
+                    <img src="~/Images/student.png" runat = "server" class="img-circle person" alt="Student" width="255" height="255"/>
                 </a>
                 <div id="demo" class="collapse">
                     <p>Guitarist and Lead Vocalist</p>
@@ -302,23 +319,36 @@
                     <p>Member since 1988</p>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <p class="text-center"><strong>Name</strong></p><br>
+            <div class="col-sm-3">
+                <p class="text-center"><strong>Faculty</strong></p><br>
                 <a href="#demo2" data-toggle="collapse">
-                    <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+                    <img src="~/Images/faculty.jpg" runat="server" class="img-circle person" alt="Faculty" width="255" height="255"/>
                 </a>
-                <div id="demo2" class="collapse">
+                <div id="demo2" class="collapse">ae
                     <p>Drummer</p>
                     <p>Loves drummin'</p>
                     <p>Member since 1988</p>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <p class="text-center"><strong>Name</strong></p><br>
+            <div class="col-sm-3">
+                <p class="text-center"><strong>School</strong></p><br>
                 <a href="#demo3" data-toggle="collapse">
-                    <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+                    <img src="~/Images/school.png" runat="server" class="img-circle person" alt="School" width="255" height="255"/>
                 </a>
+                                      
                 <div id="demo3" class="collapse">
+                    <p>Bass player</p>
+                    <p>Loves math</p>
+                    <p>Member since 2005</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <p class="text-center"><strong>Employee</strong></p><br>
+                <a href="#demo4" data-toggle="collapse">
+                    <img src="~/Images/employee.png" runat="server" class="img-circle person" alt="Employee" width="255" height="255"/>
+                </a>
+                                      
+                <div id="demo4" class="collapse">
                     <p>Bass player</p>
                     <p>Loves math</p>
                     <p>Member since 2005</p>
@@ -326,7 +356,7 @@
             </div>
         </div>
     </div>
-
+       
     <!-- Container (TOUR Section) -->
     <div id="tour" class="bg-1">
         <div class="container">
@@ -342,87 +372,292 @@
                 <div class="col-sm-4">
                     <div class="thumbnail">
                         <img src="~/Images/add_user.jpg" runat="server" alt="Add Employee" width="200" height="100"/>
-                        <button class="btn" data-toggle="modal" data-target="#exampleModalPreview">Add Employee</button>
+                        <button class="btn" data-toggle="modal" data-target="#modalEmployee">Add Employee</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
                         <img src="~/Images/add_school.png" runat="server" alt="Add School" width="200" height="100"/>                      
-                        <button class="btn" data-toggle="modal" data-target="#myModal">Add School</button>
+                        <button class="btn" data-toggle="modal" data-target="#modalSchool">Add School</button>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thumbnail">
                         <img src="~/Images/add_student.jpg" alt="Add Student" runat="server" width="200" height="100"/>                       
-                        <button class="btn" data-toggle="modal" data-target="#myModal">Add Student</button>
+                        <button class="btn" data-toggle="modal" data-target="#modalStudent">Add Student</button>
                     </div>
                 </div>
             </div>
         </div>
-
+     </div>
         
-        <!-- Modal -->
-<div class="modal fade right" data-backdrop="static" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
-    <div class="modal-dialog momodel modal-fluid" role="document">
-        <div class="modal-content ">
-            <div class=" modal-header text-center">
-                <h5 class="modal-title w-100" id="exampleModalPreviewLabel">Material Design  Full Screen Modal</h5>
-                <button  type="button" class="close " data-dismiss="modal" aria-label="Close">
-                    <span style="font-size: 1.3em;" aria-hidden="true">&times;</span>
-                </button>
+        <!-- Add Employee Modal -->
+            <div class="modal fade right" data-backdrop="static" id="modalEmployee" tabindex="-1" role="dialog" 
+                aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+                <div class="modal-dialog momodel modal-fluid" role="document">
+                    <div class="modal-content ">
+                        <div class=" modal-header text-center">
+                            <h5 class="modal-title w-100" id="modalEmployeeLabel">Material Design  Full Screen Modal</h5>
+                            <button  type="button" class="close " data-dismiss="modal" aria-label="Close">
+                                <span style="font-size: 1.3em;" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            
+                                <asp:ScriptManager ID ="Script" runat ="server">
+                                </asp:ScriptManager>
+                                <asp:UpdatePanel ID ="employeePanel" runat ="server">
+                                    <ContentTemplate>
+                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="sID" DataSourceID="SqlDataSource1"
+                                        AllowPaging="True" AllowSorting="True" CssClass="customers" ForeColor="#333333" GridLines="None">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                                            <asp:BoundField DataField="sID" HeaderText="sID" SortExpression="sID" ReadOnly="True" />
+                                            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+                                            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                                            <asp:BoundField DataField="Zip" HeaderText="Zip" SortExpression="Zip" />
+                                            <asp:BoundField DataField="EstYear" HeaderText="EstYear" SortExpression="EstYear" />
+                                            <asp:BoundField DataField="sdID" HeaderText="sdID" SortExpression="sdID" />
+                                            <asp:BoundField DataField="County" HeaderText="County" SortExpression="County" />
+                                        </Columns>
+                                            <EditRowStyle BackColor="#7C6F57" />
+                                            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                            <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                            <RowStyle BackColor="#E3EAEB" />
+                                            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                                            <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                                            <SortedAscendingHeaderStyle BackColor="#246B61" />
+                                            <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                                            <SortedDescendingHeaderStyle BackColor="#15524A" />
+                                    </asp:GridView>
+                                </ContentTemplate>
+                                </asp:UpdatePanel>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                                    SelectCommand="SELECT &quot;Name&quot;, &quot;sID&quot;, &quot;Type&quot;, &quot;City&quot;, &quot;Zip&quot;, &quot;EstYear&quot;, &quot;sdID&quot;, &quot;County&quot; FROM &quot;SCHOOLS&quot;" DeleteCommand="DELETE FROM &quot;SCHOOLS&quot; WHERE &quot;sID&quot; = :sID" 
+                                    InsertCommand="INSERT INTO &quot;SCHOOLS&quot; (&quot;Name&quot;, &quot;sID&quot;, &quot;Type&quot;, &quot;City&quot;, &quot;Zip&quot;, &quot;EstYear&quot;, &quot;sdID&quot;, &quot;County&quot;) VALUES (:Name, :sID, :Type, :City, :Zip, :EstYear, :sdID, :County)" 
+                                    UpdateCommand="UPDATE &quot;SCHOOLS&quot; SET &quot;Name&quot; = :Name, &quot;Type&quot; = :Type, &quot;City&quot; = :City, &quot;Zip&quot; = :Zip, &quot;EstYear&quot; = :EstYear, &quot;sdID&quot; = :sdID, &quot;County&quot; = :County WHERE &quot;sID&quot; = :sID">
+                                    <DeleteParameters>
+                                        <asp:Parameter Name="sID" Type="String" />
+                                    </DeleteParameters>
+                                    <InsertParameters>
+                                        <asp:Parameter Name="Name" Type="String" />
+                                        <asp:Parameter Name="sID" Type="String" />
+                                        <asp:Parameter Name="Type" Type="String" />
+                                        <asp:Parameter Name="City" Type="String" />
+                                        <asp:Parameter Name="Zip" Type="Decimal" />
+                                        <asp:Parameter Name="EstYear" Type="Decimal" />
+                                        <asp:Parameter Name="sdID" Type="String" />
+                                        <asp:Parameter Name="County" Type="String" />
+                                    </InsertParameters>
+                                    <UpdateParameters>
+                                        <asp:Parameter Name="Name" Type="String" />
+                                        <asp:Parameter Name="Type" Type="String" />
+                                        <asp:Parameter Name="City" Type="String" />
+                                        <asp:Parameter Name="Zip" Type="Decimal" />
+                                        <asp:Parameter Name="EstYear" Type="Decimal" />
+                                        <asp:Parameter Name="sdID" Type="String" />
+                                        <asp:Parameter Name="County" Type="String" />
+                                        <asp:Parameter Name="sID" Type="String" />
+                                    </UpdateParameters>
+                                </asp:SqlDataSource>   
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-md btn-rounded">Save changes</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                
-                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="EID" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
-            <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="EID" HeaderText="EID" ReadOnly="True" SortExpression="EID" />
-                <asp:BoundField DataField="SSN" HeaderText="SSN" SortExpression="SSN" />
-                <asp:BoundField DataField="Fname" HeaderText="Fname" SortExpression="Fname" />
-                <asp:BoundField DataField="Lname" HeaderText="Lname" SortExpression="Lname" />
-                <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
-                <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                <asp:BoundField DataField="depID" HeaderText="depID" SortExpression="depID" />
-            </Columns>
-        </asp:GridView>
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT &quot;EID&quot;, &quot;SSN&quot;, &quot;Fname&quot;, &quot;Lname&quot;, &quot;DOB&quot;, &quot;Email&quot;, &quot;Phone&quot;, &quot;depID&quot; FROM &quot;EMPLOYEES&quot;" DeleteCommand="DELETE FROM &quot;EMPLOYEES&quot; WHERE &quot;EID&quot; = :EID" InsertCommand="INSERT INTO &quot;EMPLOYEES&quot; (&quot;EID&quot;, &quot;SSN&quot;, &quot;Fname&quot;, &quot;Lname&quot;, &quot;DOB&quot;, &quot;Email&quot;, &quot;Phone&quot;, &quot;depID&quot;) VALUES (:EID, :SSN, :Fname, :Lname, :DOB, :Email, :Phone, :depID)" UpdateCommand="UPDATE &quot;EMPLOYEES&quot; SET &quot;SSN&quot; = :SSN, &quot;Fname&quot; = :Fname, &quot;Lname&quot; = :Lname, &quot;DOB&quot; = :DOB, &quot;Email&quot; = :Email, &quot;Phone&quot; = :Phone, &quot;depID&quot; = :depID WHERE &quot;EID&quot; = :EID">
-            <DeleteParameters>
-                <asp:Parameter Name="EID" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="EID" Type="String" />
-                <asp:Parameter Name="SSN" Type="String" />
-                <asp:Parameter Name="Fname" Type="String" />
-                <asp:Parameter Name="Lname" Type="String" />
-                <asp:Parameter Name="DOB" Type="DateTime" />
-                <asp:Parameter Name="Email" Type="String" />
-                <asp:Parameter Name="Phone" Type="Decimal" />
-                <asp:Parameter Name="depID" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="SSN" Type="String" />
-                <asp:Parameter Name="Fname" Type="String" />
-                <asp:Parameter Name="Lname" Type="String" />
-                <asp:Parameter Name="DOB" Type="DateTime" />
-                <asp:Parameter Name="Email" Type="String" />
-                <asp:Parameter Name="Phone" Type="Decimal" />
-                <asp:Parameter Name="depID" Type="String" />
-                <asp:Parameter Name="EID" Type="String" />
-            </UpdateParameters>
-        </asp:SqlDataSource>
-
+        <!-- Add School Modal -->
+            <div class="modal fade right" data-backdrop="static" id="modalSchool" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+                <div class="modal-dialog momodel modal-fluid" role="document">
+                    <div class="modal-content ">
+                        <div class=" modal-header text-center">
+                            <h5 class="modal-title w-100" id="modalSchoolLabel">Material Design  Full Screen Modal</h5>
+                            <button  type="button" class="close " data-dismiss="modal" aria-label="Close">
+                                <span style="font-size: 1.3em;" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                                 <asp:UpdatePanel ID ="schoolPanel" runat ="server">
+                                    <ContentTemplate>
+                                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="sID" DataSourceID="SqlDataSource1" 
+                                            AllowPaging="True" AllowSorting="True" CellPadding ="4" CssClass="customers" ForeColor="#333333" GridLines="None">
+                                        <AlternatingRowStyle BackColor="White" />
+                                    <Columns>
+                                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                                        <asp:BoundField DataField="sID" HeaderText="sID" ReadOnly="True" SortExpression="sID" />
+                                        <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+                                        <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                                        <asp:BoundField DataField="Zip" HeaderText="Zip" SortExpression="Zip" />
+                                        <asp:BoundField DataField="EstYear" HeaderText="EstYear" SortExpression="EstYear" />
+                                        <asp:BoundField DataField="sdID" HeaderText="sdID" SortExpression="sdID" />
+                                        <asp:BoundField DataField="County" HeaderText="County" SortExpression="County" />
+                                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                                    </Columns>
+                                        <EditRowStyle BackColor="#7C6F57" />
+                                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#E3EAEB" />
+                                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                                        <SortedAscendingHeaderStyle BackColor="#246B61" />
+                                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                                        <SortedDescendingHeaderStyle BackColor="#15524A" />
+                                </asp:GridView>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM &quot;STUDENTS&quot;" DeleteCommand="DELETE FROM &quot;STUDENTS&quot; WHERE &quot;stID&quot; = :stID" InsertCommand="INSERT INTO &quot;STUDENTS&quot; (&quot;stID&quot;, &quot;SSN&quot;, &quot;Ethnicity&quot;, &quot;DOB&quot;, &quot;LName&quot;, &quot;FName&quot;, &quot;City&quot;, &quot;Street&quot;, &quot;County&quot;, &quot;Zip&quot;, &quot;Contact&quot;, &quot;State&quot;, &quot;sID&quot;, &quot;age&quot;, &quot;GPA&quot;, &quot;c_grade&quot;, &quot;EMAIL&quot;) VALUES (:stID, :SSN, :Ethnicity, :DOB, :LName, :FName, :City, :Street, :County, :Zip, :Contact, :State, :sID, :age, :GPA, :c_grade, :EMAIL)" UpdateCommand="UPDATE &quot;STUDENTS&quot; SET &quot;SSN&quot; = :SSN, &quot;Ethnicity&quot; = :Ethnicity, &quot;DOB&quot; = :DOB, &quot;LName&quot; = :LName, &quot;FName&quot; = :FName, &quot;City&quot; = :City, &quot;Street&quot; = :Street, &quot;County&quot; = :County, &quot;Zip&quot; = :Zip, &quot;Contact&quot; = :Contact, &quot;State&quot; = :State, &quot;sID&quot; = :sID, &quot;age&quot; = :age, &quot;GPA&quot; = :GPA, &quot;c_grade&quot; = :c_grade, &quot;EMAIL&quot; = :EMAIL WHERE &quot;stID&quot; = :stID">
+                                        <DeleteParameters>
+                                            <asp:Parameter Name="stID" Type="String" />
+                                        </DeleteParameters>
+                                        <InsertParameters>
+                                            <asp:Parameter Name="stID" Type="String" />
+                                            <asp:Parameter Name="SSN" Type="String" />
+                                            <asp:Parameter Name="Ethnicity" Type="String" />
+                                            <asp:Parameter Name="DOB" Type="DateTime" />
+                                            <asp:Parameter Name="LName" Type="String" />
+                                            <asp:Parameter Name="FName" Type="String" />
+                                            <asp:Parameter Name="City" Type="String" />
+                                            <asp:Parameter Name="Street" Type="String" />
+                                            <asp:Parameter Name="County" Type="String" />
+                                            <asp:Parameter Name="Zip" Type="Decimal" />
+                                            <asp:Parameter Name="Contact" Type="Decimal" />
+                                            <asp:Parameter Name="State" Type="String" />
+                                            <asp:Parameter Name="sID" Type="String" />
+                                            <asp:Parameter Name="age" Type="Decimal" />
+                                            <asp:Parameter Name="GPA" Type="Decimal" />
+                                            <asp:Parameter Name="c_grade" Type="String" />
+                                            <asp:Parameter Name="EMAIL" Type="String" />
+                                        </InsertParameters>
+                                        <UpdateParameters>
+                                            <asp:Parameter Name="SSN" Type="String" />
+                                            <asp:Parameter Name="Ethnicity" Type="String" />
+                                            <asp:Parameter Name="DOB" Type="DateTime" />
+                                            <asp:Parameter Name="LName" Type="String" />
+                                            <asp:Parameter Name="FName" Type="String" />
+                                            <asp:Parameter Name="City" Type="String" />
+                                            <asp:Parameter Name="Street" Type="String" />
+                                            <asp:Parameter Name="County" Type="String" />
+                                            <asp:Parameter Name="Zip" Type="Decimal" />
+                                            <asp:Parameter Name="Contact" Type="Decimal" />
+                                            <asp:Parameter Name="State" Type="String" />
+                                            <asp:Parameter Name="sID" Type="String" />
+                                            <asp:Parameter Name="age" Type="Decimal" />
+                                            <asp:Parameter Name="GPA" Type="Decimal" />
+                                            <asp:Parameter Name="c_grade" Type="String" />
+                                            <asp:Parameter Name="EMAIL" Type="String" />
+                                            <asp:Parameter Name="stID" Type="String" />
+                                        </UpdateParameters>
+                                </asp:SqlDataSource> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-md btn-rounded">Save changes</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary btn-md btn-rounded">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal -->
 
+        <!-- Add Student Modal -->
+            <div class="modal fade right" data-backdrop="static" id="modalStudent" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+                <div class="modal-dialog momodel modal-fluid" role="document">
+                    <div class="modal-content ">
+                        <div class=" modal-header text-center">
+                            <h5 class="modal-title w-100" id="modalStudentLabel">Material Design  Full Screen Modal</h5>
+                            <button  type="button" class="close " data-dismiss="modal" aria-label="Close">
+                                <span style="font-size: 1.3em;" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                               
+            <asp:UpdatePanel ID ="studentPanel" runat ="server">
+                                <ContentTemplate>
+                                    <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="stID" 
+                                        DataSourceID="SqlDataSource3" ForeColor="#333333" GridLines="None" CellPadding ="4" CssClass="customers" CellMargin ="15px" border="1" AllowPaging="True" AllowSorting="True">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:BoundField DataField="stID" HeaderText="Student ID" ReadOnly="True" SortExpression="stID" />
+                                            <asp:BoundField DataField="SSN" HeaderText="SSN" SortExpression="SSN" />
+                                            <asp:BoundField DataField="LName" HeaderText="Last Name" SortExpression="LName" />
+                                            <asp:BoundField DataField="FName" HeaderText="First Name" SortExpression="FName" />
+                                            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                                            <asp:BoundField DataField="Zip" HeaderText="Zip" SortExpression="Zip" />
+                                            <asp:BoundField DataField="Contact" HeaderText="Contact" SortExpression="Contact" />
+                                            <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                                            <asp:BoundField DataField="sID" HeaderText="School ID" SortExpression="sID" />
+                                            <asp:BoundField DataField="age" HeaderText="Age" SortExpression="age" />
+                                            <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                                        </Columns>
+                                        <EditRowStyle BackColor="#7C6F57" />
+                                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#E3EAEB" />
+                                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                                        <SortedAscendingHeaderStyle BackColor="#246B61" />
+                                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                                        <SortedDescendingHeaderStyle BackColor="#15524A" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM &quot;STUDENTS&quot; WHERE &quot;stID&quot; = :stID" InsertCommand="INSERT INTO &quot;STUDENTS&quot; (&quot;stID&quot;, &quot;SSN&quot;, &quot;Ethnicity&quot;, &quot;DOB&quot;, &quot;LName&quot;, &quot;FName&quot;, &quot;City&quot;, &quot;Street&quot;, &quot;County&quot;, &quot;Zip&quot;, &quot;Contact&quot;, &quot;State&quot;, &quot;sID&quot;, &quot;age&quot;, &quot;GPA&quot;, &quot;c_grade&quot;) VALUES (:stID, :SSN, :Ethnicity, :DOB, :LName, :FName, :City, :Street, :County, :Zip, :Contact, :State, :sID, :age, :GPA, :c_grade)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM &quot;STUDENTS&quot;" UpdateCommand="UPDATE &quot;STUDENTS&quot; SET &quot;SSN&quot; = :SSN, &quot;Ethnicity&quot; = :Ethnicity, &quot;DOB&quot; = :DOB, &quot;LName&quot; = :LName, &quot;FName&quot; = :FName, &quot;City&quot; = :City, &quot;Street&quot; = :Street, &quot;County&quot; = :County, &quot;Zip&quot; = :Zip, &quot;Contact&quot; = :Contact, &quot;State&quot; = :State, &quot;sID&quot; = :sID, &quot;age&quot; = :age, &quot;GPA&quot; = :GPA, &quot;c_grade&quot; = :c_grade WHERE &quot;stID&quot; = :stID">
+                                        <DeleteParameters>
+                                            <asp:Parameter Name="stID" Type="String" />
+                                        </DeleteParameters>
+                                        <InsertParameters>
+                                            <asp:Parameter Name="stID" Type="String" />
+                                            <asp:Parameter Name="SSN" Type="String" />
+                                            <asp:Parameter Name="Ethnicity" Type="String" />
+                                            <asp:Parameter Name="DOB" Type="DateTime" />
+                                            <asp:Parameter Name="LName" Type="String" />
+                                            <asp:Parameter Name="FName" Type="String" />
+                                            <asp:Parameter Name="City" Type="String" />
+                                            <asp:Parameter Name="Street" Type="String" />
+                                            <asp:Parameter Name="County" Type="String" />
+                                            <asp:Parameter Name="Zip" Type="Decimal" />
+                                            <asp:Parameter Name="Contact" Type="Decimal" />
+                                            <asp:Parameter Name="State" Type="String" />
+                                            <asp:Parameter Name="sID" Type="String" />
+                                            <asp:Parameter Name="age" Type="Decimal" />
+                                            <asp:Parameter Name="GPA" Type="Decimal" />
+                                            <asp:Parameter Name="c_grade" Type="String" />
+                                        </InsertParameters>
+                                        <UpdateParameters>
+                                            <asp:Parameter Name="SSN" Type="String" />
+                                            <asp:Parameter Name="Ethnicity" Type="String" />
+                                            <asp:Parameter Name="DOB" Type="DateTime" />
+                                            <asp:Parameter Name="LName" Type="String" />
+                                            <asp:Parameter Name="FName" Type="String" />
+                                            <asp:Parameter Name="City" Type="String" />
+                                            <asp:Parameter Name="Street" Type="String" />
+                                            <asp:Parameter Name="County" Type="String" />
+                                            <asp:Parameter Name="Zip" Type="Decimal" />
+                                            <asp:Parameter Name="Contact" Type="Decimal" />
+                                            <asp:Parameter Name="State" Type="String" />
+                                            <asp:Parameter Name="sID" Type="String" />
+                                            <asp:Parameter Name="age" Type="Decimal" />
+                                            <asp:Parameter Name="GPA" Type="Decimal" />
+                                            <asp:Parameter Name="c_grade" Type="String" />
+                                            <asp:Parameter Name="stID" Type="String" />
+                                        </UpdateParameters>
+                                    </asp:SqlDataSource>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger btn-md btn-rounded" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-md btn-rounded">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
     <!-- Container (Contact Section) -->
     <div id="contact" class="container">
         <h3 class="te   xt-center">Contact</h3>
@@ -438,75 +673,21 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        <input class="form-control" id="name" runat="server" name="name" placeholder="Name" type="text"/>
                     </div>
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        <input class="form-control" id="email" runat="server" name="email" placeholder="Email" type="email"/>
                     </div>
                 </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-                <br>
+                <textarea class="form-control" id="comments" runat="server" name="comments" placeholder="Comment" rows="5"></textarea>
+                <br/>
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <button class="btn pull-right" type="submit">Send</button>
+                        <asp:Button ID="Button1" class="btn pull-right" OnClick="Btn_Send" CssClass="form-submit" runat="server" Text="Send" />
                     </div>
                 </div>
             </div>
         </div>       
-
-        <script>
-window.onload = function () {
-	
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	
-	title:{
-		text:"Fortune 500 Companies by Country"
-	},
-	axisX:{
-		interval: 1
-	},
-	axisY2:{
-		interlacedColor: "rgba(1,77,101,.2)",
-		gridColor: "rgba(1,77,101,.1)",
-		title: "Number of Companies"
-	},
-	data: [{
-		type: "bar",
-		name: "companies",
-		axisYType: "secondary",
-		color: "#014D65",
-		dataPoints: [
-			{ y: 3, label: "Sweden" },
-			{ y: 7, label: "Taiwan" },
-			{ y: 5, label: "Russia" },
-			{ y: 9, label: "Spain" },
-			{ y: 7, label: "Brazil" },
-			{ y: 7, label: "India" },
-			{ y: 9, label: "Italy" },
-			{ y: 8, label: "Australia" },
-			{ y: 11, label: "Canada" },
-			{ y: 15, label: "South Korea" },
-			{ y: 12, label: "Netherlands" },
-			{ y: 15, label: "Switzerland" },
-			{ y: 25, label: "Britain" },
-			{ y: 28, label: "Germany" },
-			{ y: 29, label: "France" },
-			{ y: 52, label: "Japan" },
-			{ y: 103, label: "China" },
-			{ y: 134, label: "US" }
-		]
-	}]
-});
-chart.render();
-
-}
-</script>
-
-        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-        
-
 
         <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
@@ -524,7 +705,9 @@ chart.render();
         </div>
     </div>
 
-     <!-- Footer -->
+      
+
+    <!-- Footer -->
     <footer class="text-center">
         <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
             <span class="glyphicon glyphicon-chevron-up"></span>
@@ -532,7 +715,8 @@ chart.render();
     </footer>
 
     <script>
-$(document).ready(function(){
+        $(document).ready(function () {
+ 
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip();
 
