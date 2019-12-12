@@ -17,30 +17,27 @@
 </head>
 <body>
 
-        <!-- Sing in  Form -->
+        <!-- Sign in  Form -->
         <section class="sign-in">
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
-                        <figure><img src="~/Images/signin-image.jpg" runat="server" alt="sing up image"/></figure>
+                        <figure><img src="~/Images/signin-image.jpg" runat="server" alt="sign up image"/></figure>
                         <a href="Register.aspx" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Sign In</h2>
                         <form method="POST" runat="server" class="register-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="username" runat="server" id="your_user" placeholder="Username" />
+                                <input type="text" name="username" runat="server" id="your_user" placeholder="Email" />
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" runat="server" name="password" id="your_pass" placeholder="Password" />
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-                            </div>
+                           
                             <asp:Button ID="Button1" OnClick="Btn_Click" CssClass="form-submit" runat="server" Text="Login" />
                             <div class="form-group form-button">
                                 

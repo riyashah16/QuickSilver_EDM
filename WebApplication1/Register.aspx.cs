@@ -22,29 +22,33 @@ namespace WebApplication1
 
             string username = this.username.Value;
             string password = this.pass.Value;
+            string repassword = this.re_pass.Value;
             char id = 'a';
 
             string strConnectString = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=128.196.27.219)(PORT=1521)))(CONNECT_DATA=(SID=MIS00)));User ID=quicksilver;Password=@oVD2npPj";
             OracleConnection conn = new OracleConnection(strConnectString);
 
-            try
+            if (username != "" || password != "" || repassword != "")
             {
-                conn.Open();
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.CommandText = "admin_insert";
-                cmd.Parameters.Add("username", OracleDbType.Varchar2, username, ParameterDirection.Input);
-                cmd.Parameters.Add("password", OracleDbType.Varchar2, password, ParameterDirection.Input);
-                cmd.Parameters.Add("id", OracleDbType.Char, id, ParameterDirection.Input);
-                cmd.ExecuteScalar();
-           
-            }
-            catch (Exception ex)
-            {
-                conn.Close();
-            }
 
+                try
+                {
+                    conn.Open();
+                    OracleCommand cmd = new OracleCommand();
+                    cmd.Connection = conn;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandText = "admin_insert";
+                    cmd.Parameters.Add("username", OracleDbType.Varchar2, username, ParameterDirection.Input);
+                    cmd.Parameters.Add("password", OracleDbType.Varchar2, password, ParameterDirection.Input);
+                    cmd.Parameters.Add("id", OracleDbType.Char, id, ParameterDirection.Input);
+                    cmd.ExecuteScalar();
+
+                }
+                catch (Exception ex)
+                {
+                    conn.Close();
+                }
+            }
 
         }
     }

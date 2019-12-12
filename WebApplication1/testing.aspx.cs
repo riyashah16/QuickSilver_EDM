@@ -13,6 +13,7 @@ using System.Net.Mail;
 using System.Net;
 using System.IO;
 using System.Collections.ObjectModel;
+using System.Web.UI.DataVisualization.Charting;
 
 namespace WebApplication1
 {
@@ -27,9 +28,9 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView3.RowStyle.HorizontalAlign = HorizontalAlign.Center;
-            GridView1.RowStyle.HorizontalAlign = HorizontalAlign.Center;
-            GridView2.RowStyle.HorizontalAlign = HorizontalAlign.Center;
+            //GridView3.RowStyle.HorizontalAlign = HorizontalAlign.Center;
+            //GridView.RowStyle.HorizontalAlign = HorizontalAlign.Center;
+            //GridView2.RowStyle.HorizontalAlign = HorizontalAlign.Center;
 
             /*
             email1 = "sparmar@email.arizona.edu";
@@ -37,9 +38,8 @@ namespace WebApplication1
             subject1 = "This is a test";
             Body1 = "Email Demonstration";
             */
-            
         }
-        
+
         protected void Btn_Send(object sender, EventArgs e)
         {
             /*
@@ -85,8 +85,8 @@ namespace WebApplication1
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress("paldi.pidz@gmail.com", "Admin");
                 mail.To.Add(email);
-                mail.Subject = "Test Feature";
-                mail.Body = "God Willing";
+                mail.Subject = this.mailSubject.Value;
+                mail.Body = this.Textarea1.Value;
                 mail.IsBodyHtml = true;
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 client.Credentials = new System.Net.NetworkCredential("paldi.pidz@gmail.com", "$Origin$");

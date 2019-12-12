@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Sign up</h2>
+                        <h2 class="form-title">Sign Up</h2>
                         <form method="POST" runat="server" class="register-form" >
                          
                             <div class="form-group">
@@ -37,12 +37,9 @@
                                 <input type="password" name="re_pass" runat="server" id="re_pass" placeholder="Repeat your password" onkeyup='check();' />
                                 <span id='message'></span>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term"  class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                            </div>
+                           
                             <div class="form-group form-button">
-                                <asp:Button ID="Button1" runat="server" name="Create Account" CssClass="form-submit" onclick="BtnRegister_Click" Text="Button" value="Create Account" />
+                                <asp:Button ID="Button1" runat="server" name="Create Account" CssClass="form-submit" onclick="BtnRegister_Click" Text="Create Account" value="Create Account" />
                                <%-- <input type="submit" name="signup" id="signup" runat="server" class="form-submit" onClick="BtnRegister_Click" value="Register" /> --%>
                             </div>
                         </form>
